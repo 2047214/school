@@ -65,3 +65,46 @@ body {
   background-size: 100% 100%;
 }
 </style> 
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.img-container {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+
+<h2>Images Side by Side</h2>
+<p>Float images side by side:</p>
+
+<div class="clearfix">
+  <div class="img-container">
+  <img src="https://w.ndtvimg.com/sites/7/2017/01/09104859/Primary-Wing-For-Modern-Public-School-Architecture-Award-Institutional-6.jpg" alt="Italy" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="https://www.kphconstruction.com/wp-content/uploads/2016/03/1P1A9343.jpg" alt="Forest" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="https://www.modernschool.ac.in/images/library.jpg" alt="Mountains" style="width:100%">
+  </div>
+</div>
+
+<p>Note that we also use the clearfix hack to take care of the layout flow, and that we add the box-sizing property to make sure that the image container doesn't break due to extra padding. Try to remove this code to see the effect.</p>
+
+</body>
+</html>
