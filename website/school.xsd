@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<smita:schema xmlns:smita="http://www.w3.org/2001/XMLSchema">
+<smita:element name="SCHOOL">
+<smita:complexType>
+<smita:sequence>
+<smita:element name="TEACHER_DETAILS" maxOccurs="10">
+<smita:complexType>
+<smita:sequence>
+<smita:element name="Teacher_ID" type="smita:integer"></smita:element>
+<smita:element name="Teacher_Name" type="smita:string"></smita:element>
+<smita:element name="Subject" type="smita:string"></smita:element>
+<smita:element name="Class" type="smita:string"></smita:element>
+<smita:element name="Salary" type="TSalary"></smita:element>
+</smita:sequence>
+</smita:complexType>
+</smita:element>
+</smita:sequence>
+</smita:complexType>
+</smita:element>
+<smita:simpleType name="TSalary">
+<smita:restriction base="smita:integer">
+<smita:maxExclusive value="200000"></smita:maxExclusive>
+<smita:minExclusive value="35000"></smita:minExclusive>
+</smita:restriction>
+</smita:simpleType>
+</smita:schema>
