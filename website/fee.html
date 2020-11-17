@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title><h1> REGISTRATION FORM VALIDATION </h1></title>
+</head>
+<body style="background-color:rgb(12, 213, 240);">
+	
+	<script>
+		function formvalidate()
+		{
+			
+let id = document.getElementById("ID");
+let name = document.getElementById("NAME");
+let password = document.getElementById("PASSWORD");
+let address = document.getElementById("ADDRESS");
+let email = document.getElementById("EMAIL");
+let phone = document.getElementById("PHONE_NUMBER");
+			
+			
+if( id.value.trim()=="" || name.value.trim()=="" || password.value.trim()=="" || address.value.trim()=="" || email.value.trim()=="" || phone.value.trim()=="")
+	{
+alert("Please enter values");
+return false;
+}
+			
+		else 
+	{			
+true;			
+}
+		
+			
+if(phone.value.trim().length==10)
+			
+			{
+				 true;
+			}
+			
+			else 
+			{
+				alert("enter phone number of 10 digits only.");
+				return false;
+			}
+			
+			
+			if(password.value.trim().length>8)
+			
+			{
+				 true;
+			}
+			
+			else 
+			{
+				alert("password should be more than 8 digits.");
+				return false;
+			}
+			
+			
+			
+			
+		}
+		
+			function check(event)
+		{
+			
+			let code= event.which;
+			
+			if((code>96 && code<123) || (code>64 && code<91) || code==32)
+			{
+				return true;
+				
+			}
+				
+			else
+			{
+				return false;
+			}
+			
+		}
+		
+		
+		function check2(event)
+		{
+			
+			let code= event.which;
+			
+			if(code>47 && code<58)
+			{
+				return true;
+			}
+			
+			else
+			{
+				return false;
+				
+			}
+			
+		}
+        </script>
+	
+	
+	<h1>BANK REGISTRATION FORM</h1>
+	
+   <h2> <p>ENTER THE FOLLOWING DETAILS CORRECTLY:</p> </h2>
+
+	<form action="user.html" onsubmit="return formvalidate()">
+	
+		<h3>ID <input type="text" id="ID" onkeypress="return check2(event)"/></h3><br><br>
+		
+    <h3>NAME <input type="text" id="NAME" onkeypress="return check(event)"/></h3><br><br>
+		
+<h3>PASSWORD <input type="password" id="PASSWORD"/></h3><br><br>
+		
+<h3>ACCOUNT_TYPE <select name="account" id="typeaccount" required></h3>
+<h3><optgroup label="SELECT THE ACCOUNT_TYPE:"></h3>
+<h3><option value="sa"> SAVING ACCOUNT </option></h3>
+<h3>		<option value="ra"> REGULAR SAVING ACCOUNT </option></h3>
+<h3><option value="ca"> CURRENT ACCOUNT </option></h3>
+<h3>		<option value="rda"> DEPOSIT ACCOUNT </option></h3>
+<h3>		<option value="fda"> FIXED-DEPOSIT ACCOUNT </option></h3>
+		</optgroup>
+		</select>
+		
+		<br><br>
+		
+		<h3>ADDRESS <input type="text" id="ADDRESS"/></h3><br><br>
+		
+    <h3>EMAIL <input type="email" id="EMAIL"/><br><br></h3>
+		
+<h3>PHONE_NUMBER <input type="text" id="PHONE_NUMBER" onkeypress="return check2(event)" /></h3><br><br>
+		
+<h3><button type="submit"> SUBMIT </button></h3>
+	
+	</form>
+	
+</body>
+</html>
