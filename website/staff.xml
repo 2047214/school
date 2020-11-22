@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<company>
+	<employee>
+		<ename>MALINI</ename>
+		<eage>34</eage>
+		<esalary>80780</esalary>
+	</employee>
+	
+    <employee>
+		<ename>NIVAS</ename>
+		<eage>30</eage>
+		<esalary>78090</esalary>
+	</employee>
+	
+    <employee>
+		<ename>PAVIKA</ename>
+		<eage>28</eage>
+		<esalary>98776</esalary>
+	</employee>
+    
+    <employee>
+		<ename>KARTHIKA</ename>
+		<eage>45</eage>
+		<esalary>89099</esalary>
+	</employee>
+    
+    <employee>
+		<ename>DHILIP</ename>
+		<eage>51</eage>
+		<esalary>77860</esalary>
+	</employee>
+    
+    <employee>
+		<ename>ADEN</ename>
+		<eage>28</eage>
+		<esalary>34340</esalary>
+	</employee>
+    
+    <employee>
+		<ename>ZENIA FIRDOUS</ename>
+		<eage>33</eage>
+		<esalary>44580</esalary>
+	</employee>
+
+</company>
