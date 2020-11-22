@@ -8,6 +8,21 @@ body {
 </style>
 <!DOCTYPE html>
 <html>
+  <head>
+    <script>
+    function checkCookie() {
+      var username = getCookie("fname");
+      if (username != "") {
+       alert("Welcome again " + username);
+      } else {
+        username = prompt("Please enter your name:", "");
+        if (username != "" && username != null) {
+          setCookie("fname", username, 365);
+        }
+      }
+    }
+  </script>
+  </head>
 <style>
 input[type=text], select {
   width: 100%;
@@ -40,7 +55,7 @@ div {
   padding: 20px;
 }
 </style>
-<body>
+<body onload="checkCookie()">
 
 <h3>Give your information here :</h3>
 
