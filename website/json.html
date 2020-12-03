@@ -1,32 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-        function load()
-        {
-            let url=" http://time.jsontest.com ";
-            var request;
-            request=new XMLHttpRequest();
-            request.onreadystatechange=function()
-            {
-                if(request.readyState==4)
-                {
-                    var obj=JSON.parse(request.responseText);
-                    document.getElementById("date").innerHTML=obj.date;
-                    document.getElementById("time").innerHTML=obj.time;
-                }
-            };
-            request.open("GET",url,true);
-            request.send();
-        }
-    </script>
-</head>
-<body>
-    Date:<span id="date"></span><br>
-    Time:<span id="time"></span><br>
-    <button type="button" onclick="load()">Load Information</button>
-</body>
-</html>
+<!DOCTYPE HTML> 
+<html> 
+    <head> 
+        <title> places </title> 
+        <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+         </script> 
+        </head>
+         <body style = "text-align:center;"> 
+            <h1>HALTON WALDROF SCHOOL</h1>
+         <h2 style = "color:black;"> BRANCHES ALL OVER THE WORLD </h2>
+          <p id = "GFG_UP" style = "font-size: 15px; font-weight: bold;"> </p> 
+          <button onclick = "GFG_FUN()"> HAVE A LOOK! </button> <br><br>
+           <style>
+           table, th, td {
+                border: 1px solid black;
+                 border-collapse: collapse;}
+           th, td { padding: 15px;
+           }
+                  </style> 
+        <table id="table" 
+        cellspacing="2" cellpadding="10px"></table> 
+                <script> 
+           var el_up = document.getElementById("GFG_UP"); 
+     var list = [ {"country":"united states", "places":"dark houses",}, {"country":"New York", "places":"statue of liberty"}, {"country":"Europe", "places":"picchu"}, {"country":"Antartica", "places":"Alcatraz island"}, 
+                  {"country":"London", "places":"Buckingham palace"}, {"country":"china", "places":"great wall"}, 
+                  {"country":"syndey", "places":"opera House"}, {"country":"Paris", "places":"Eiffin tower"} ];
+                   el_up.innerHTML = "here is the table list " + "of places for you with offers.<br><br>" 
+                   function GFG_FUN() 
+                   {
+                        var cols = []; for (var i = 0; i < list.length; i++)
+                         {
+                              for (var k in list[i])
+                               
+                               {
+                                    if (cols.indexOf(k) === -1) { cols.push(k);
+                    } 
+                            } 
+         } 
+                     var table = document.createElement("table"); 
+                          var tr = table.insertRow(-1); 
+                            for (var i = 0; i < cols.length; i++) 
+                           {
+                  var theader = document.createElement("th"); 
+                                  theader.innerHTML = cols[i]; 
+                          tr.appendChild(theader); 
+                                     }
+                       for (var i = 0; i < list.length; i++)
+                                
+                       { 
+                                 trow = table.insertRow(-1); 
+                            for (var j = 0; j < cols.length; j++)
+                                     {
+                                var cell = trow.insertCell(-1); 
+                         cell.innerHTML = list[i][cols[j]]; 
+           }
+                     }
+                   var el = document.getElementById("table"); 
+    el.innerHTML = ""; el.appendChild(table); }
+ </script> </body> </html>
