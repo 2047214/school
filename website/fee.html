@@ -14,9 +14,6 @@ background-size: 100% 100%;
 .p{
 	opacity: 0.6;
 }
-.align{
-	text-align: center;
-}
 </style>
 	
 	<script>
@@ -119,10 +116,10 @@ if(phone.value.trim().length==10)
 	
 			<h3>ID <div class="p"><input type="text" id="ID" onkeypress="return check2(event)"/></div> </h3><br><br>
 		
-    <h3>NAME <div class="p"><input type="text" id="NAME" onkeypress="return check(event)"/></div></h3><br><br>
+    <h3>NAME <div class="p"><input type="text" id="NAME" onkeypress="return check(event)"/></div> </h3><br><br>
 		
 <h3>PASSWORD<div class="p"><input type="password" id="PASSWORD"/></div></h3><br><br>
-<div class="align">		
+		
 <h3>ACCOUNT_TYPE <div class="p"><select name="account" id="typeaccount" required></h3>
 <h3><optgroup label="SELECT THE ACCOUNT_TYPE:"></h3>
 <h3><option value="sa"> SAVING ACCOUNT </option></h3>
@@ -132,7 +129,6 @@ if(phone.value.trim().length==10)
 <h3>		<option value="fda"> FIXED-DEPOSIT ACCOUNT </option></h3>
 		</optgroup>
 	</div>
-</div>
 		</select>
 		
 		<br><br>
