@@ -1,7 +1,7 @@
 <!DOCTYPE HTML> 
 <html> 
     <head> 
-        <title> places </title> 
+        <title> BRANCHES</title> 
         <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
          </script> 
         </head>
@@ -22,11 +22,14 @@
   background-attachment: fixed;
   background-size: 100% 100%;
 }
-                  </style> 
+                 
+                </style> 
+        
         <table class="center" id="table" 
         cellspacing="10" cellpadding="30px">
     </table> 
-                <script> 
+               
+               <script> 
            var el_up = document.getElementById("GFG_UP"); 
      var list = [ {"COUNTRY":"CANNADA", "LOCATION":"OTTAWA",},
       {"COUNTRY":"FRANCE", "LOCATION":"PARIS"}, 
@@ -41,12 +44,15 @@
                    el_up.innerHTML = "HERE IS THE LIST" + " OF BRANCHES AROUND THE WORLD-<br><br>" 
                    function GFG_FUN() 
                    {
-                        var cols = []; for (var i = 0; i < list.length; i++)
+                        var cols = [];
+                         for (var i = 0; i < list.length; i++)
                          {
                               for (var k in list[i])
                                
                                {
-                                    if (cols.indexOf(k) === -1) { cols.push(k);
+                                    if (cols.indexOf(k) === -1) 
+                                    {
+                                          cols.push(k);
                     } 
                             } 
          } 
@@ -69,5 +75,6 @@
            }
                      }
                    var el = document.getElementById("table"); 
-    el.innerHTML = ""; el.appendChild(table); }
+    el.innerHTML = "";
+     el.appendChild(table); }
  </script> </body> </html>
