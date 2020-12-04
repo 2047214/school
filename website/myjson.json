@@ -1,0 +1,10 @@
+[ {"COUNTRY":"CANNADA", "LOCATION":"OTTAWA",},
+    {"COUNTRY":"FRANCE", "LOCATION":"PARIS"}, 
+   {"COUNTRY":"AFRICA", "LOCATION":"CAPE TOWN"},
+    {"COUNTRY":"UNITED STATES", "LOCATION":"LAS VEGAS"}, 
+                {"COUNTRY":"GERMANY", "LOCATION":"BERLIN"}, 
+                {"COUNTRY":"JAPAN", "LOCATION":"TOKYO"}, 
+                {"COUNTRY":"NORWAY", "LOCATION":"OSLO"},
+                 {"COUNTRY":"NEW YORK", "LOCATION":"ACRA"},
+                 {"COUNTRY":"EGYPT", "LOCATION":"CAIRO"},
+                  ];

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+        <div>
+            <div class="w3-hide-small" style="margin-top:32px"> </div>
+            <div class="w3-center" style="margin-left: auto;margin-right: auto;width: 99%;">
+                <p class="w3-xxlarge w3-animate-top ">APP LIST</p>
+            </div>
+            <div class="w3-center">
+            <button class="w3-button w3-purple w3-hover-pink" onclick="change_myselect(this.value) "> CLICK HERE</button>
+
+            </div>
+
+            <div>
+                <p class="w3-black" id="demo" style="text-align: center; max-width: 40%;margin-left: auto;margin-right: auto;font-size: 24px;"></p>
+            </div>
+
+            <script>
+                function change_myselect(sel) {
+                    var obj, dbParam, xmlhttp, myObj, x, txt = "";
+                    obj = {
+                        table: sel,
+                    };
+                    dbParam = JSON.stringify(obj);
+                    xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            myObj = JSON.parse(this.responseText);
+                            txt += "<table border='1' width='100%'"
+                            for (x in myObj) {
+                                txt += "<tr><td>" + myObj[x].app_name + "</td></tr>";
+                            }
+                            txt += "</table>"
+                            document.getElementById("demo").innerHTML = txt;
+                        }
+                    };
+                    xmlhttp.open("GET", "myjson.json", true);
+                    xmlhttp.send("x=" + dbParam);
+                }
+            </script>
+        </div>
+    </div>
+    </body>
+    </html>
