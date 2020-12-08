@@ -26,15 +26,15 @@
             <th>AGE</th>
             <th>OPTIONS</th>
         </tr>
-        <tr ng-repeat="product in listProducts">
+        <tr ng-repeat="teacher in listTeachers">
             <td>{{$index}}</td>
-            <td>{{product.id}}</td>
-            <td>{{product.name}}</td>
-            <td>{{product.price}}</td>
-            <td>{{product.quantity}}</td>
+            <td>{{teacher.id}}</td>
+            <td>{{teacher.name}}</td>
+            <td>{{teacher.price}}</td>
+            <td>{{teacher.quantity}}</td>
             <td>
                 <a href="#" ng-click="delete()">DELETE</a> |
-                <a href="#" ng-click="edit(product.id)">EDIT</a>
+                <a href="#" ng-click="edit(teacher.id)">EDIT</a>
             </td>
         </tr>
     </table>

@@ -1,7 +1,7 @@
 angular.module('myapp',[])
 .controller('myctrl',function($scope)
 {
-    $scope.listProducts=[
+    $scope.listTeachers=[
         {id:'101',name:'Mrs.MALINI',price:89001,quantity:34},
         {id:'102',name:'Mr.YOGESH',price:98001,quantity:30},
         {id:'103',name:'Miss.PAVIKA',price:69540,quantity:28},
@@ -13,20 +13,20 @@ angular.module('myapp',[])
     $scope.save=function()
     {
         var index=getindex($scope.id);
-        $scope.listProducts[index].name=$scope.name;
-        $scope.listProducts[index].price=$scope.price;
-        $scope.listProducts[index].quantity=$scope.quantity;
+        $scope.listTeachers[index].name=$scope.name;
+        $scope.listTeachers[index].price=$scope.price;
+        $scope.listTeachers[index].quantity=$scope.quantity;
     }
     $scope.add=function()
     {
-        $scope.listProducts.push({
+        $scope.listTeachers.push({
             id:$scope.id,name:$scope.name,price:$scope.price,quantity:$scope.quantity
         });
     }
     function getindex(id)
     {
-        for(var i=0;i<$scope.listProducts.length;i++)
-        if($scope.listProducts[i].id==id)
+        for(var i=0;i<$scope.listTeachers.length;i++)
+        if($scope.listTeachers[i].id==id)
         return i;
         return -1;
     }
@@ -34,10 +34,10 @@ angular.module('myapp',[])
     {
         var index=this.$index;
         var product=$scope.listProducts[index];
-        $scope.id=product.id;
-        $scope.name=product.name;
-        $scope.price=product.price;
-        $scope.quantity=product.quantity;
+        $scope.id=teacher.id;
+        $scope.name=teacher.name;
+        $scope.price=teacher.price;
+        $scope.quantity=teacher.quantity;
     }
     $scope.delete=function()
     {
@@ -45,7 +45,7 @@ angular.module('myapp',[])
         if(result==true)
         {
             var index=this.$index;
-            $scope.listProducts.splice(index,1);
+            $scope.listTeachers.splice(index,1);
         }
     };
 });
