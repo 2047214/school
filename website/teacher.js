@@ -41,7 +41,7 @@ angular.module('myapp',[])
     }
     $scope.delete=function()
     {
-        var result=confirm('Are you sure?');
+        var result=confirm('ARE YOU SURE?');
         if(result==true)
         {
             var index=this.$index;

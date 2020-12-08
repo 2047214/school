@@ -1,3 +1,12 @@
+<style>
+    body {
+      background-image: url("https://i.pinimg.com/originals/1b/dc/83/1bdc832e8f8a1e58cd8356ecb437b457.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+    </style>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +17,7 @@
     <script src="teacher.js"></script>
 </head>
 <body ng-app="myapp" ng-controller="myctrl">
-    <table cellpadding="2" cellspacing="2" border="1">
+    <table cellpadding="7" cellspacing="7" border="4">
         <tr>
             <th>SERIAL_NUMBER</th>
             <th>TEACHER_ID</th>
@@ -24,8 +33,8 @@
             <td>{{product.price}}</td>
             <td>{{product.quantity}}</td>
             <td>
-                <a href="#" ng-click="delete()">Delete</a> |
-                <a href="#" ng-click="edit(product.id)">Edit</a>
+                <a href="#" ng-click="delete()">DELETE</a> |
+                <a href="#" ng-click="edit(product.id)">EDIT</a>
             </td>
         </tr>
     </table>
