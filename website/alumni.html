@@ -167,3 +167,67 @@ text-decoration: underline;
     
 </body>
 </html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN</title>
+    <script src="angular.min.js"></script>
+    <script src="teacher.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+    <table cellpadding="2" cellspacing="2" border="1">
+        <tr>
+            <th>SERIAL_NUMBER</th>
+            <th>TEACHER_ID</th>
+            <th>NAME</th>
+            <th>SALARY</th>
+            <th>AGE</th>
+            <th>OPTIONS</th>
+        </tr>
+        <tr ng-repeat="product in listProducts">
+            <td>{{$index}}</td>
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.quantity}}</td>
+            <td>
+                <a href="#" ng-click="delete()">Delete</a> |
+                <a href="#" ng-click="edit(product.id)">Edit</a>
+            </td>
+        </tr>
+    </table>
+    <h3>TEACHER INFORMATION</h3>
+    <table cellpadding="4" cellspacing="5">
+        <tr>
+            <td>TEACHER_ID</td>
+            <td><input type="text" ng-model="id"></td>
+        </tr>
+        <tr>
+            <td>NAME</td>
+            <td><input type="text" ng-model="name"></td>
+        </tr>
+        <tr>
+            <td>SALARY</td>
+            <td><input type="text" ng-model="price"></td>
+        </tr>
+        <tr>
+            <td>AGE</td>
+            <td><input type="text" ng-model="quantity"></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td><input type="button" value="ADD" ng-click="add()">
+            <input type="button" value="SAVE" ng-click="save()"></td>
+        </tr>
+    </table>
+    
+</body>
+</html>
