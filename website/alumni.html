@@ -128,7 +128,7 @@ text-decoration: underline;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TEACHER_DETAILS</title>
     <script src="angular.min.js"></script>
     <script src="angular_app.js"></script>
     <link href="angular.css" rel="stylesheet">
@@ -139,16 +139,16 @@ text-decoration: underline;
         <br \>
         <br \>
 
-        Search:<input type="text" placeholder="Seach Employees" ng-model="Search" />
+        Search:<input type="text" placeholder="SEARCH TEACHERS" ng-model="Search" />
         <br \>
         <br \>
         <table>
             <tr>
-                <th>Name</th>
+                <th>NAME</th>
                 <th>DOB</th>
-                <th>Gender</th>
-                <th>Salary(number)</th>
-                <th>Salary(currency)</th>
+                <th>GENDER</th>
+                <th>SALARY(Number)</th>
+                <th>SALARY(Currency)</th>
             </tr>
             <tbody>
                 <tr ng-repeat="employee in employees | limitTo:rowlimit |filter:Search ">
