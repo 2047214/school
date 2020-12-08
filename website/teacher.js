@@ -2,25 +2,25 @@ angular.module('myapp',[])
 .controller('myctrl',function($scope)
 {
     $scope.listTeachers=[
-        {id:'101',name:'Mrs.MALINI',price:89001,quantity:34},
-        {id:'102',name:'Mr.YOGESH',price:98001,quantity:30},
-        {id:'103',name:'Miss.PAVIKA',price:69540,quantity:28},
-        {id:'104',name:'Mrs.KARTHIKA',price:87541,quantity:45},
-        {id:'105',name:'Mr.DHILIP',price:78000,quantity:51},
-        {id:'106',name:'Mr.ADEN',price:76890,quantity:28},
-        {id:'107',name:'Miss.ZENIA FATHIMA',price:59540,quantity:33},
+        {id:'101',name:'Mrs.MALINI',salary:89001,age:34},
+        {id:'102',name:'Mr.YOGESH',salary:98001,age:30},
+        {id:'103',name:'Miss.PAVIKA',salary:69540,age:28},
+        {id:'104',name:'Mrs.KARTHIKA',salary:87541,age:45},
+        {id:'105',name:'Mr.DHILIP',salary:78000,age:51},
+        {id:'106',name:'Mr.ADEN',salary:76890,age:28},
+        {id:'107',name:'Miss.ZENIA FATHIMA',salary:59540,age:33},
     ];
     $scope.save=function()
     {
         var index=getindex($scope.id);
         $scope.listTeachers[index].name=$scope.name;
-        $scope.listTeachers[index].price=$scope.price;
-        $scope.listTeachers[index].quantity=$scope.quantity;
+        $scope.listTeachers[index].price=$scope.salary;
+        $scope.listTeachers[index].quantity=$scope.age;
     }
     $scope.add=function()
     {
         $scope.listTeachers.push({
-            id:$scope.id,name:$scope.name,price:$scope.price,quantity:$scope.quantity
+            id:$scope.id,name:$scope.name,salary:$scope.salary,age:$scope.age
         });
     }
     function getindex(id)
@@ -33,11 +33,11 @@ angular.module('myapp',[])
     $scope.edit=function(id)
     {
         var index=this.$index;
-        var product=$scope.listProducts[index];
+        var teacher=$scope.listTeachers[index];
         $scope.id=teacher.id;
         $scope.name=teacher.name;
-        $scope.price=teacher.price;
-        $scope.quantity=teacher.quantity;
+        $scope.salary=teacher.salary;
+        $scope.age=teacher.age;
     }
     $scope.delete=function()
     {
