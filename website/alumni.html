@@ -154,7 +154,7 @@ text-decoration: underline;
                 <tr ng-repeat="employee in employees | limitTo:rowlimit |filter:Search ">
                     <td>{{employee.name | uppercase}}</td>
                     <td>{{employee.dob | date:"dd/MM/yyyy"}}</td>
-                    <td>{{employee.gender | lowercase}}</td>
+                    <td>{{employee.gender | uppercase}}</td>
                     <td>{{employee.salary | number:0}}</td>
                     <td> {{employee.salary | currency:"&#8377;":0 }}</td>
                 </tr>
